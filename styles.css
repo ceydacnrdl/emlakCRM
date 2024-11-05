@@ -1,0 +1,111 @@
+/* Genel Stil */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(139, 109, 167);
+  font-size: 1rem; /* Varsayılan yazı boyutu */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Alanı */
+.header {
+  background-color: white;
+}
+
+/* İçerik Merkezleme */
+.header-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+/* Logo */
+.brand img {
+  cursor: pointer;
+  height: auto;
+  max-height: 50px; /* Logo yüksekliği ayarlama */
+}
+
+/* Menü */
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Dikey ortalama */
+}
+
+.menu li a {
+  text-decoration: none;
+  border-right: 1px solid #000000;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1rem; /* Menü yazı boyutu */
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+/* Medya Sorguları */
+
+/* Tablet boyutlar */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .menu li {
+    text-align: center;
+    border-right: none;
+  }
+
+  .menu li a {
+    font-size: 0.95rem; /* Tablet için daha küçük yazı boyutu */
+  }
+
+  .brand img {
+    max-height: 40px;
+  }
+}
+
+/* Küçük mobil cihazlar */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem; /* Küçük ekranlar için genel yazı boyutu */
+  }
+
+  .header-container {
+    padding: 0.5rem;
+  }
+
+  .menu {
+    font-size: 0.85rem; /* Menü yazı boyutunu küçültme */
+  }
+
+  .menu li a {
+    font-size: 0.5rem; /* Menü bağlantıları daha küçük */
+  }
+}
