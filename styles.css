@@ -19,6 +19,7 @@ body {
 #firstHeader {
   background-color: #e4e6ea;
 }
+
 .mail {
   text-decoration: none;
   color: gray;
@@ -119,7 +120,7 @@ body {
 /* Slider Navigation Dots */
 .w3-display-bottommiddle {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -145,18 +146,21 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
 .overlay-text {
   position: absolute;
   font-size: 63px;
-  top: 145px;
+  top: 207px;
   right: 400px;
   color: white;
+  font-weight: bold;
 }
+
 .overlay-text-des {
   position: absolute;
   font-size: 28px;
-  top: 145px;
-  right: 400px;
+  top: 290px;
+  right: 461px;
   color: white;
 }
 
@@ -194,44 +198,224 @@ body {
 
 /* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
-}
-
-/* Orta boyutlu ekranlar (Tablet boyutları) */
-@media (min-width: 768px) and (max-width: 1499px) {
-  .header-container {
-    flex-direction: row;
-  }
-
-  .menu li {
-    padding: 0.5rem 0.75rem;
-  }
-}
-
-/* Küçük mobil cihazlar */
-@media (max-width: 767px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .menu {
+  .button-container {
+    position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .menu li a {
-    padding: 0.5rem 0;
-    border: none;
+  /* Buttons */
+  .button {
+    font-size: 18px;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
-  .w3-left,
-  .w3-right {
-    font-size: 24px;
-    padding: 5px;
+  .button.filled {
+    background-color: #4344f8;
+    color: #ffffff;
+    border: 2px solid #4344f8;
   }
 
-  .w3-display-bottommiddle {
-    bottom: 10px;
+  .button.filled:hover {
+    background-color: #384ecc;
+  }
+
+  .button.outlined {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+
+  .button.outlined:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .hero-title {
+    font-size: clamp(24px, 3vw, 33px);
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.5;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .phone-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content-box {
+    font-size: 20px;
+  }
+
+  .red-box {
+    background-color: red;
+  }
+
+  .blue-box {
+    background-color: blue;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .text-start {
+    text-align: start;
+  }
+
+  .header-text {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .content-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .description-text {
+    font-size: 14px;
+  }
+
+  .icon-box {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: 1500px) {
+    .menu li {
+      padding: 0.5rem 1rem;
+    }
+
+    .overlay-text {
+      font-size: 72px;
+      top: 210px;
+      right: 338px;
+    }
+
+    .overlay-text-des {
+      font-size: 30px;
+      top: 300px;
+      right: 430px;
+    }
+
+    .button-container {
+      position: absolute;
+      top: 380px;
+      right: 420px;
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1499px) {
+    .header-container {
+      flex-direction: row;
+    }
+
+    .menu li {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .button-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .button.filled,
+    .button.outlined {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .header-container {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .menu li a {
+      padding: 0.5rem 0;
+      border: none;
+    }
+
+    .w3-left,
+    .w3-right {
+      font-size: 24px;
+      padding: 5px;
+    }
+
+    .w3-display-bottommiddle {
+      bottom: 10px;
+    }
+
+    .overlay-text {
+      font-size: 40px;
+      top: 150px;
+      right: 20px;
+    }
+
+    .overlay-text-des {
+      font-size: 18px;
+      top: 220px;
+      right: 20px;
+    }
+
+    .button-container {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button.filled,
+    .button.outlined {
+      width: 80%;
+    }
+    .hero-title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .hero-description {
+      font-size: 14px;
+      text-align: center;
+    }
   }
 }
