@@ -160,6 +160,38 @@ body {
   color: white;
 }
 
+.infoSection {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 4rem 0;
+}
+
+.infoSectionTitle {
+  font-size: large;
+  text-align: center;
+}
+
+.infoSectionTitle .bold {
+  font-weight: 900;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Kartları yatayda ortalar */
+}
+
+.card {
+  flex: 1 1 30%; /* Kartların aynı genişlikte olmasını sağlar */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Kartların maksimum genişliği */
+  text-align: center;
+}
+
 /* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
 }
