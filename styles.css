@@ -16,6 +16,24 @@ body {
   margin: 0 auto;
 }
 
+#firstHeader {
+  background-color: #e4e6ea;
+}
+.mail {
+  text-decoration: none;
+  color: gray;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+#socialLinks {
+  display: flex;
+  height: 1rem;
+  gap: 10px;
+}
+
 .header {
   background-color: white;
   font-weight: bold;
@@ -44,7 +62,6 @@ body {
 .menu {
   list-style: none;
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -52,7 +69,6 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-right: 1px solid #000000;
   color: #000000;
   padding: 0.5rem 1rem;
 }
@@ -61,12 +77,15 @@ body {
   text-decoration: none;
   color: inherit;
   display: flex;
+  padding-right: 1rem;
   align-items: center;
+  border-right: 1px solid #000000;
   height: 100%;
 }
 
-.menu li:last-child {
+.menu li:last-child a {
   border-right: none;
+  padding-right: 1rem;
 }
 
 /* 1500px ve üzeri ekranlar için */
@@ -97,7 +116,7 @@ body {
     gap: 0;
   }
 
-  .menu li {
+  .menu li a {
     padding: 0.5rem 0;
     border: none;
   }
