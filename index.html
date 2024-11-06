@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>emlakCRM</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header Başlangıcı -->
-  <header class="header">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="" href="./slider.js" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nexa:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Başlangıcı -->
+    <header class="header">
       <div class="header-container">
-          <!-- Logo Alanı -->
-          <a href="/" class="brand">
-              <img src="./assets/brand.svg" alt="Brand Logo">
-          </a>
-          <!-- Menü Alanı -->
-          <nav>
-              <ul class="menu">
-                  <li><a href="#">Ana Sayfa</a></li>
-                  <li><a href="#">Özellikler</a></li>
-                  <li><a href="#">Referanslar</a></li>
-                  <li><a href="#">Ekran Görüntüleri</a></li>
-                  <li><a href="#">İletişim</a></li>
-              </ul>
-          </nav>
+        <!-- Logo Alanı -->
+        <a href="/" class="brand">
+          <img src="./assets/icons/brand.svg" alt="Brand Logo" />
+        </a>
+        <!-- Menü Alanı -->
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#">Özellikler</a></li>
+            <li><a href="#">Referanslar</a></li>
+            <li><a href="#">Ekran Görüntüleri</a></li>
+            <li><a href="#">İletişim</a></li>
+          </ul>
+        </nav>
       </div>
-  </header>
-  <!-- Header Bitişi -->
-</body>
+    </header>
+    <!-- Header Bitişi -->
+    <!-- Hero Başlangıcı -->
+    <div>
+      <div class="w3-content w3-display-container" style="max-width: 800px">
+        <img
+          class="mySlides"
+          src="./assets/images/CRM_emlak_anasayfa.webp"
+          style="width: 100%"
+        />
+        <div
+          class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+          style="width: 100%"
+        >
+          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+            &#10094;
+          </div>
+          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+            &#10095;
+          </div>
+          <span
+            class="w3-badge demo w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(1)"
+          ></span>
+          <span
+            class="w3-badge demo w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(2)"
+          ></span>
+          <span
+            class="w3-badge demo w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(3)"
+          ></span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <!-- Hero Bitişi -->
+  </body>
 </html>
