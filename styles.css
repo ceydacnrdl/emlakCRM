@@ -21,6 +21,7 @@ body {
   font-weight: bold;
 }
 
+/* Header Container Temel Stil */
 .header-container {
   width: 100%;
   max-width: 1200px;
@@ -32,6 +33,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Logo */
 .brand img {
   cursor: pointer;
   height: auto;
@@ -67,9 +69,8 @@ body {
   border-right: none;
 }
 
-/* 1500px ve üzeri ekranlar */
+/* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
-  /* Büyük ekranlar için özel bir değişiklik yoksa burayı boş bırakabilirsiniz */
 }
 
 /* Orta boyutlu ekranlar (Tablet boyutları) */
