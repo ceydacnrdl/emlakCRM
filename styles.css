@@ -69,6 +69,78 @@ body {
   border-right: none;
 }
 
+/* Slider Images */
+.mySlides {
+  width: 100%;
+  display: none;
+}
+
+/* Navigation Arrows */
+.w3-left,
+.w3-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.w3-left {
+  left: 10px;
+}
+
+.w3-right {
+  right: 10px;
+}
+
+/* Slider Navigation Dots */
+.w3-display-bottommiddle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  background-color: #4344f8;
+  border-radius: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.w3-badge:hover {
+  background-color: #fff;
+}
+
+.w3-display-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.overlay-text {
+  position: absolute;
+  font-size: 63px;
+  top: 145px;
+  right: 400px;
+  color: white;
+}
+.overlay-text-des {
+  position: absolute;
+  font-size: 28px;
+  top: 145px;
+  right: 400px;
+  color: white;
+}
+
 /* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
 }
@@ -100,5 +172,15 @@ body {
   .menu li {
     padding: 0.5rem 0;
     border: none;
+  }
+
+  .w3-left,
+  .w3-right {
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  .w3-display-bottommiddle {
+    bottom: 10px;
   }
 }

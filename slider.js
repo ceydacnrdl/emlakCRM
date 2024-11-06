@@ -1,5 +1,9 @@
 var slideIndex = 1;
-showDivs(slideIndex);
+window.onload = function () {
+  showDivs(slideIndex);
+  window.plusDivs = plusDivs;
+  window.currentDiv = currentDiv;
+};
 
 function plusDivs(n) {
   showDivs((slideIndex += n));
