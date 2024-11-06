@@ -8,6 +8,7 @@
 body {
   background-color: rgb(139, 109, 167);
   font-size: 1rem; /* Varsayılan yazı boyutu */
+  font-family: "Nexa", sans-serif; /* Nexa fontunu kullan */
 }
 
 .container {
@@ -47,15 +48,20 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center; /* Dikey ortalama */
-}
-
-.menu li a {
-  text-decoration: none;
   border-right: 1px solid #000000;
   color: #000000;
   padding: 0.5rem 1rem;
   display: block;
   font-size: 1rem; /* Menü yazı boyutu */
+  font-family: "Nexa", sans-serif; /* Nexa fontunu kullan */
+}
+
+.menu li a {
+  text-decoration: none;
+  color: inherit; /* Link rengini li renginden miras al */
+  display: flex;
+  align-items: center; /* Dikey ortalama */
+  height: 100%; /* Ebeveyn öğenin yüksekliğini kullan */
 }
 
 .menu li:last-child {
@@ -80,10 +86,12 @@ body {
   .menu li {
     text-align: center;
     border-right: none;
+    font-size: 0.95rem; /* Tablet için daha küçük yazı boyutu */
+    font-family: "Nexa", sans-serif; /* Nexa fontunu kullan */
   }
 
-  .menu li a {
-    font-size: 0.95rem; /* Tablet için daha küçük yazı boyutu */
+  .menu li:last-child {
+    border-right: none;
   }
 
   .brand img {
@@ -105,7 +113,11 @@ body {
     font-size: 0.85rem; /* Menü yazı boyutunu küçültme */
   }
 
-  .menu li a {
+  .menu li {
     font-size: 0.5rem; /* Menü bağlantıları daha küçük */
+    font-family: "Nexa", sans-serif; /* Nexa fontunu kullan */
+  }
+  .menu li:last-child {
+    border-right: none;
   }
 }
