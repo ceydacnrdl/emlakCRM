@@ -173,8 +173,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.infoSection {
+  background-color: white;
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  padding: 4rem 0 4rem 0;
 }
 
 /* Buttons */
@@ -401,6 +405,32 @@ body {
   font-weight: bold;
 }
 
+.infoSectionTitle {
+  font-size: large;
+  text-align: center;
+}
+
+.infoSectionTitle .bold {
+  font-weight: 900;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Kartları yatayda ortalar */
+}
+
+.card {
+  flex: 1 1 30%; /* Kartların aynı genişlikte olmasını sağlar */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Kartların maksimum genişliği */
+  text-align: center;
+}
+
+/* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
   .menu li {
     padding: 0.5rem 1rem;
@@ -453,5 +483,225 @@ body {
 
   .grid-container {
     grid-template-columns: 1fr;
+    .button-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Buttons */
+    .button {
+      font-size: 18px;
+
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button.filled {
+      background-color: #4344f8;
+      color: #ffffff;
+      border: 2px solid #4344f8;
+    }
+
+    .button.filled:hover {
+      background-color: #384ecc;
+    }
+
+    .button.outlined {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+
+    .button.outlined:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .hero-title {
+      font-size: clamp(24px, 3vw, 33px);
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .hero-description {
+      font-size: clamp(16px, 2.5vw, 20px);
+      line-height: 1.5;
+      padding-top: 10px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .phone-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .content-box {
+      font-size: 20px;
+    }
+
+    .red-box {
+      background-color: red;
+    }
+
+    .blue-box {
+      background-color: blue;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+    }
+
+    .text-end {
+      text-align: end;
+    }
+
+    .text-start {
+      text-align: start;
+    }
+
+    .header-text {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+
+    .content-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .description-text {
+      font-size: 14px;
+    }
+
+    .icon-box {
+      background-color: blue;
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: 1500px) {
+      .menu li {
+        padding: 0.5rem 1rem;
+      }
+
+      .overlay-text {
+        font-size: 72px;
+        top: 210px;
+        right: 338px;
+      }
+
+      .overlay-text-des {
+        font-size: 30px;
+        top: 300px;
+        right: 430px;
+      }
+
+      .button-container {
+        position: absolute;
+        top: 380px;
+        right: 420px;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1499px) {
+      .header-container {
+        flex-direction: row;
+      }
+
+      .menu li {
+        padding: 0.5rem 0.75rem;
+      }
+
+      .button-container {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .button.filled,
+      .button.outlined {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .header-container {
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+
+      .menu li a {
+        padding: 0.5rem 0;
+        border: none;
+      }
+
+      .w3-left,
+      .w3-right {
+        font-size: 24px;
+        padding: 5px;
+      }
+
+      .w3-display-bottommiddle {
+        bottom: 10px;
+      }
+
+      .overlay-text {
+        font-size: 40px;
+        top: 150px;
+        right: 20px;
+      }
+
+      .overlay-text-des {
+        font-size: 18px;
+        top: 220px;
+        right: 20px;
+      }
+
+      .button-container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .button.filled,
+      .button.outlined {
+        width: 80%;
+      }
+      .hero-title {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
   }
 }
