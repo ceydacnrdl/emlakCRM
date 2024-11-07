@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: rgb(139, 109, 167);
   font-family: "Nexa", sans-serif;
   font-size: clamp(10px, 0.8vw + 0.4rem, 14px);
 }
@@ -149,513 +148,310 @@ body {
 
 .overlay-text {
   position: absolute;
-  font-size: 63px;
-  top: 207px;
-  right: 400px;
+  font-size: clamp(36px, 5vw, 63px);
+  top: 20%;
+  right: 5%;
   color: white;
   font-weight: bold;
+  padding-top: 2rem;
+  text-align: right;
 }
 
 .overlay-text-des {
   position: absolute;
-  font-size: 28px;
-  top: 290px;
-  right: 461px;
+  font-size: clamp(18px, 3vw, 28px);
+  top: 40%;
+  right: 5%;
   color: white;
+  text-align: right;
 }
 
-.infoSection {
-  background-color: white;
+.button-container {
+  position: absolute;
+  top: 46%;
+  right: 22%;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  padding: 4rem 0 4rem 0;
+  gap: 20px;
 }
 
-.infoSectionTitle {
-  font-size: large;
+/* Buttons */
+.button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button.filled {
+  background-color: #4344f8;
+  color: #ffffff;
+  border: 2px solid #4344f8;
+}
+
+.button.filled:hover {
+  background-color: #384ecc;
+}
+
+.button.outlined {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.button.outlined:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-title {
+  font-size: clamp(24px, 3vw, 33px);
+  padding-top: 90px;
   text-align: center;
 }
 
-.infoSectionTitle .bold {
-  font-weight: 900;
+.hero-description {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.5;
+  padding: 30px 0 30px 0;
+  text-align: center;
 }
 
-.cardWrapper {
+.phone-section {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding-top: 20px;
-}
-
-.cardImage img {
-  width: 100%; /* Görüntünün genişliğini tam olarak doldur */
-  height: auto; /* Yüksekliği otomatik olarak ayarla */
-  object-fit: cover; /* Görüntüyü kapsayacak şekilde ayarla */
-}
-
-.cardTitle {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.cardDescription {
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.cardContent {
-  display: relative;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
-.cardImage {
-  position: relative; /* Absolute konumlandırmaya göre referans */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content-box {
+  font-size: 20px;
+}
+
+.image-box img {
   width: 100%;
   height: auto;
 }
 
-.icon-container {
-  position: absolute;
-  bottom: -10px; /* Sağ alt köşe için */
-  right: -10px;
-  width: 40px; /* İkonun boyutunu ayarlayabilirsiniz */
-  height: 40px;
+.text-end {
+  text-align: end;
+  padding-bottom: 2rem;
 }
 
-.feedbackSection {
-  background-color: #f5f5f5;
+.text-start {
+  text-align: start;
+  padding-bottom: 2rem;
+}
+
+.header-text {
+  font-size: 20px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  color: #24272f;
+}
+
+.content-row {
   display: flex;
-  justify-content: center;
-  padding: 4rem 0;
-}
-
-.feedbackTitle {
-  font-size: xx-large;
-  text-align: center;
-}
-
-.feedbackSubTitle {
-  font-size: small;
-  text-align: center;
-}
-
-.personCardWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-
-.personCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 10px;
-  padding: 20px;
 }
 
-.personName {
-  color: #4344f8;
-  font-weight: bold;
+.description-text {
+  font-size: 14px;
+  color: #24272f;
 }
 
-.feedbackButton {
-  color: white;
-  width: 15%;
+.icon-box {
+  width: 52px;
+  height: 52px;
+  background-color: #3b59ff;
+  border-radius: 12px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4344f8;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex; /* Flexbox kullanarak içeriği hizala */
-  margin: 10px auto 0 auto; /* X ekseninde ortala */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+  padding: 30px;
 }
 
-.feedbackButton:hover {
-  background-color: #384ecc;
+.icon-box img {
+  width: 30px;
+  opacity: 0.9;
 }
 
-.footer {
-  background-color: #24272f;
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  height: 500px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.footerContent {
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.four-reason {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.footerColumn {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.footerDescription {
-  color: gray;
-  padding-top: 8px;
-}
-
-.footerContact {
+.image-container {
+  width: 50%;
   display: flex;
-  gap: 20px; /* Adres ve harita arasındaki boşluk */
+  justify-content: flex-end;
+  padding-right: 20px;
 }
 
-.footerInfo {
-  color: gray;
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.text-content {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-content strong {
+  color: #000;
+}
+
+.text-content ul {
+  list-style: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.text-content li {
   display: flex;
-  padding-top: 27px;
-  flex-direction: column;
-  gap: 10px; /* Linkler ve adres arasındaki boşluk */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.footerAddress {
-  width: 100%; /* Tam genişliği kapla */
-  margin-bottom: 10px; /* Adres ve linkler arasındaki boşluk */
-}
-
-.footerContact a {
-  color: gray;
-  display: block; /* Linkleri alt alta yerleştir */
-  margin-bottom: 5px; /* Linkler arasındaki boşluk */
-}
-
-.footerMap {
-  margin-top: 10px; /* Harita ve linkler arasındaki boşluk */
-  flex-shrink: 0; /* Haritanın boyutunu koru */
-}
-
-.footerTitle {
+.text-content li span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  border: 2px solid #333;
+  border-radius: 50%;
   font-weight: bold;
 }
 
-.linkList a {
-  display: block; /* Linkleri alt alta yerleştir */
-  margin-bottom: 10px; /* Linkler arasındaki boşluk */
-  text-decoration: none; /* Alt çizgiyi kaldır */
-  color: inherit; /* Metin rengini miras al */
-}
-
-.linkList a:last-child {
-  margin-bottom: 0; /* Son linkin alt boşluğunu kaldır */
-}
-
-.LinkButton {
-  color: white;
-  background-color: #4344f8;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  bottom: 0;
-}
-
-/* 1500px ve üzeri ekranlar için */
 @media (min-width: 1500px) {
+  .menu li {
+    padding: 0.5rem 1rem;
+  }
+
+  .overlay-text {
+    font-size: 72px;
+    top: 20%;
+    right: 16%;
+  }
+
+  .overlay-text-des {
+    font-size: 30px;
+    top: 37%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .overlay-text,
+  .overlay-text-des,
   .button-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    top: auto;
+    right: auto;
+    left: 10%;
+    text-align: left;
   }
 
-  /* Buttons */
-  .button {
-    font-size: 18px;
-
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .overlay-text {
+    font-size: 30px;
   }
 
-  .button.filled {
-    background-color: #4344f8;
-    color: #ffffff;
-    border: 2px solid #4344f8;
+  .overlay-text-des {
+    font-size: 16px;
   }
 
-  .button.filled:hover {
-    background-color: #384ecc;
-  }
-
-  .button.outlined {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-  }
-
-  .button.outlined:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  .hero-title {
-    font-size: clamp(24px, 3vw, 33px);
-    padding-top: 20px;
-    text-align: center;
-  }
-
-  .hero-description {
-    font-size: clamp(16px, 2.5vw, 20px);
-    line-height: 1.5;
-    padding-top: 10px;
-    text-align: center;
-    line-height: 1.5;
-  }
-  .phone-section {
-    display: flex;
-    flex-direction: column;
+  .image-container {
     width: 100%;
+    padding-right: 0;
+  }
+
+  .text-content {
+    width: 100%;
+    padding-left: 0;
   }
 
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .content-box {
-    font-size: 20px;
-  }
-
-  .red-box {
-    background-color: red;
-  }
-
-  .blue-box {
-    background-color: blue;
-  }
-
-  .image-box img {
-    width: 100%;
-    height: auto;
-  }
-
-  .text-end {
-    text-align: end;
-  }
-
-  .text-start {
-    text-align: start;
-  }
-
-  .header-text {
-    font-size: 20px;
-    padding-bottom: 10px;
-  }
-
-  .content-row {
-    display: flex;
-    gap: 10px;
-  }
-
-  .description-text {
-    font-size: 14px;
-  }
-
-  .icon-box {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
-  }
-
-  @media (min-width: 1500px) {
-    .menu li {
-      padding: 0.5rem 1rem;
-    }
-
-    .overlay-text {
-      font-size: 72px;
-      top: 210px;
-      right: 338px;
-    }
-
-    .overlay-text-des {
-      font-size: 30px;
-      top: 300px;
-      right: 430px;
-    }
-
-    .button-container {
-      position: absolute;
-      top: 380px;
-      right: 420px;
-      flex-direction: row;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1499px) {
-    .header-container {
-      flex-direction: row;
-    }
-
-    .menu li {
-      padding: 0.5rem 0.75rem;
-    }
-
-    .button-container {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .button.filled,
-    .button.outlined {
-      width: 200px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .header-container {
-      flex-direction: column;
-      padding: 1rem 0;
-    }
-
-    .menu {
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-
-    .menu li a {
-      padding: 0.5rem 0;
-      border: none;
-    }
-
-    .cardWrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      padding-top: 20px;
-    }
-
-    .w3-left,
-    .w3-right {
-      font-size: 24px;
-      padding: 5px;
-    }
-
-    .w3-display-bottommiddle {
-      bottom: 10px;
-    }
-
-    .overlay-text {
-      font-size: 40px;
-      top: 150px;
-      right: 20px;
-    }
-
-    .overlay-text-des {
-      font-size: 18px;
-      top: 220px;
-      right: 20px;
-    }
-
-    .button-container {
-      position: relative;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .button.filled,
-    .button.outlined {
-      width: 80%;
-    }
-    .hero-title {
-      font-size: 24px;
-      text-align: center;
-    }
-
-    .hero-description {
-      font-size: 14px;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 396px) {
-    .header-container {
-      flex-direction: column;
-      padding: 1rem 0;
-    }
-
-    .menu {
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-
-    .menu li a {
-      padding: 0.5rem 0;
-      border: none;
-    }
-
-    .cardWrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      padding-top: 20px;
-    }
-
-    .w3-left,
-    .w3-right {
-      font-size: 24px;
-      padding: 5px;
-    }
-
-    .w3-display-bottommiddle {
-      bottom: 10px;
-    }
-
-    .overlay-text {
-      font-size: 40px;
-      top: 150px;
-      right: 20px;
-    }
-
-    .overlay-text-des {
-      font-size: 18px;
-      top: 220px;
-      right: 20px;
-    }
-
-    .button-container {
-      position: relative;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .button.filled,
-    .button.outlined {
-      width: 80%;
-    }
-
-    .hero-title {
-      font-size: 24px;
-      text-align: center;
-    }
-
-    .hero-description {
-      font-size: 14px;
-      text-align: center;
-    }
+    grid-template-columns: 1fr;
   }
 }
