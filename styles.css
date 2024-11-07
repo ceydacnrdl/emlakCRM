@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: rgb(139, 109, 167);
   font-family: "Nexa", sans-serif;
   font-size: clamp(10px, 0.8vw + 0.4rem, 14px);
 }
@@ -149,25 +148,30 @@ body {
 
 .overlay-text {
   position: absolute;
-  font-size: 63px;
-  top: 207px;
-  right: 400px;
+  font-size: clamp(36px, 5vw, 63px);
+  top: 20%;
+  right: 5%;
   color: white;
   font-weight: bold;
+  padding-top: 2rem;
+  text-align: right;
 }
 
 .overlay-text-des {
   position: absolute;
-  font-size: 28px;
-  top: 290px;
-  right: 461px;
+  font-size: clamp(18px, 3vw, 28px);
+  top: 40%;
+  right: 5%;
   color: white;
+  text-align: right;
 }
 
 .button-container {
-  position: relative;
+  position: absolute;
+  top: 46%;
+  right: 22%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -176,7 +180,6 @@ body {
 /* Buttons */
 .button {
   font-size: 18px;
-
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -202,23 +205,25 @@ body {
 .button.outlined:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .hero-title {
   font-size: clamp(24px, 3vw, 33px);
-  padding-top: 20px;
+  padding-top: 90px;
   text-align: center;
 }
 
 .hero-description {
   font-size: clamp(16px, 2.5vw, 20px);
   line-height: 1.5;
-  padding-top: 10px;
+  padding: 30px 0 30px 0;
   text-align: center;
-  line-height: 1.5;
 }
+
 .phone-section {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .grid-container {
@@ -237,14 +242,6 @@ body {
   font-size: 20px;
 }
 
-.red-box {
-  background-color: red;
-}
-
-.blue-box {
-  background-color: blue;
-}
-
 .image-box img {
   width: 100%;
   height: auto;
@@ -252,15 +249,19 @@ body {
 
 .text-end {
   text-align: end;
+  padding-bottom: 2rem;
 }
 
 .text-start {
   text-align: start;
+  padding-bottom: 2rem;
 }
 
 .header-text {
   font-size: 20px;
   padding-bottom: 10px;
+  text-decoration: underline;
+  color: #24272f;
 }
 
 .content-row {
@@ -270,12 +271,134 @@ body {
 
 .description-text {
   font-size: 14px;
+  color: #24272f;
 }
 
 .icon-box {
-  background-color: blue;
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
+  background-color: #3b59ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+  padding: 30px;
+}
+
+.icon-box img {
+  width: 30px;
+  opacity: 0.9;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  height: 500px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.four-reason {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.image-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.text-content {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-content strong {
+  color: #000;
+}
+
+.text-content ul {
+  list-style: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.text-content li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text-content li span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  border: 2px solid #333;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 @media (min-width: 1500px) {
@@ -285,102 +408,50 @@ body {
 
   .overlay-text {
     font-size: 72px;
-    top: 210px;
-    right: 338px;
+    top: 20%;
+    right: 16%;
   }
 
   .overlay-text-des {
     font-size: 30px;
-    top: 300px;
-    right: 430px;
-  }
-
-  .button-container {
-    position: absolute;
-    top: 380px;
-    right: 420px;
-    flex-direction: row;
+    top: 37%;
+    right: 20%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1499px) {
+@media (max-width: 768px) {
   .header-container {
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .menu li {
-    padding: 0.5rem 0.75rem;
-  }
-
+  .overlay-text,
+  .overlay-text-des,
   .button-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .button.filled,
-  .button.outlined {
-    width: 200px;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .menu li a {
-    padding: 0.5rem 0;
-    border: none;
-  }
-
-  .w3-left,
-  .w3-right {
-    font-size: 24px;
-    padding: 5px;
-  }
-
-  .w3-display-bottommiddle {
-    bottom: 10px;
+    top: auto;
+    right: auto;
+    left: 10%;
+    text-align: left;
   }
 
   .overlay-text {
-    font-size: 40px;
-    top: 150px;
-    right: 20px;
+    font-size: 30px;
   }
 
   .overlay-text-des {
-    font-size: 18px;
-    top: 220px;
-    right: 20px;
+    font-size: 16px;
   }
 
-  .button-container {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  .image-container {
+    width: 100%;
+    padding-right: 0;
   }
 
-  .button.filled,
-  .button.outlined {
-    width: 80%;
-  }
-  .hero-title {
-    font-size: 24px;
-    text-align: center;
+  .text-content {
+    width: 100%;
+    padding-left: 0;
   }
 
-  .hero-description {
-    font-size: 14px;
-    text-align: center;
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
